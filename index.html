@@ -117,7 +117,7 @@
     display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
     margin-top: 32px;
   }
-  @media (max-width: 700px) { .info-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 600px) { .info-grid { grid-template-columns: 1fr; } }
   .info-card {
     border: 2px solid var(--black); border-radius: 20px; padding: 28px 22px;
   }
@@ -192,10 +192,9 @@
     font-size: 36px; font-weight: 900; line-height: 1;
     color: var(--lime); margin-bottom: 6px;
   }
-  .encuentro-card.kick-off .encuentro-num { color: var(--lime); }
   .encuentro-card:not(.kick-off) .encuentro-num { color: var(--black); }
-  .encuentro-card:hover .encuentro-num { color: var(--black); }
-  .encuentro-card.kick-off:hover .encuentro-num { color: var(--lime); }
+  .encuentro-card:not(.kick-off):hover .encuentro-num { color: var(--black); }
+  .encuentro-card.kick-off .encuentro-num { color: var(--lime); }
   .encuentro-titulo { font-size: 14px; font-weight: 900; text-transform: uppercase; margin-bottom: 6px; line-height: 1.3; }
   .encuentro-fecha { font-size: 11px; font-weight: 700; letter-spacing: 1px; opacity: 0.5; text-transform: uppercase; }
   .encuentro-status {
@@ -211,132 +210,7 @@
   }
   .encuentro-card:hover .encuentro-arrow { opacity: 1; transform: translateX(4px); }
 
-  /* ── ENCUENTRO SUBPAGE ── */
-  .subpage-hero {
-    margin-top: 72px;
-    background: var(--black); padding: 60px 40px 48px;
-    position: relative; overflow: hidden;
-  }
-  .back-btn {
-    display: inline-flex; align-items: center; gap: 8px;
-    font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
-    color: rgba(255,255,255,0.5); cursor: pointer; margin-bottom: 32px;
-    transition: color 0.2s;
-  }
-  .back-btn:hover { color: var(--lime); }
-  .subpage-eyebrow {
-    font-size: 11px; font-weight: 700; letter-spacing: 3px;
-    color: var(--mid-gray); text-transform: uppercase; margin-bottom: 12px;
-  }
-  .subpage-title {
-    font-size: clamp(32px, 5vw, 68px);
-    font-weight: 900; line-height: 0.95;
-    color: var(--white); text-transform: uppercase; letter-spacing: -2px;
-  }
-  .subpage-title .highlight {
-    display: inline-block;
-    background: var(--lime); color: var(--black);
-    padding: 0 10px; transform: rotate(-1deg); line-height: 1.1;
-  }
-  .subpage-fecha {
-    margin-top: 20px; font-size: 13px; font-weight: 700; letter-spacing: 2px;
-    color: rgba(255,255,255,0.35); text-transform: uppercase;
-  }
-  .subpage-deco {
-    position: absolute; right: -60px; top: -60px;
-    width: 320px; height: 320px;
-    background: var(--lime); border-radius: 50%;
-    opacity: 0.06; pointer-events: none;
-  }
-
-  /* ── CONTENT SECTIONS ── */
-  .content-section { padding: 64px 0; }
-  .content-section + .content-section { border-top: 2px solid var(--black); }
-
-  .content-section.alt { background: #f7f7f5; padding: 64px 0; }
-  .content-section.alt + .content-section.alt { border-top: 2px solid #e8e8e6; }
-
-  .content-title {
-    font-size: clamp(22px, 3vw, 30px); font-weight: 900;
-    text-transform: uppercase; letter-spacing: -0.5px; margin-bottom: 24px;
-  }
-  .content-title .accent { background: var(--lime); padding: 0 6px; }
-
-  .content-body { font-size: clamp(15px, 2vw, 17px); line-height: 1.75; color: #2a2a2a; }
-  .content-body + .content-body { margin-top: 16px; }
-
-  /* ── IDEAS CLAVE ── */
-  .ideas-list { display: flex; flex-direction: column; gap: 12px; margin-top: 24px; }
-  .idea-item {
-    display: flex; align-items: flex-start; gap: 14px;
-    background: var(--gray); border-radius: 14px; padding: 16px 20px;
-    border: 2px solid transparent; transition: border-color 0.2s, transform 0.2s;
-  }
-  .idea-item:hover { border-color: var(--lime); transform: translateX(4px); }
-  .idea-icon {
-    width: 26px; height: 26px; min-width: 26px;
-    background: var(--lime); border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 12px; font-weight: 900; margin-top: 2px;
-  }
-  .idea-text { font-size: 14px; line-height: 1.6; color: #333; }
-
-  /* ── GRABACIÓN ── */
-  .grabacion-box {
-    margin-top: 32px;
-    border: 2px solid var(--black); border-radius: 20px; padding: 32px;
-    display: flex; align-items: center; gap: 24px;
-    transition: background 0.2s;
-  }
-  .grabacion-box:hover { background: var(--lime); }
-  .grabacion-icon {
-    width: 56px; height: 56px; min-width: 56px;
-    background: var(--black); border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 22px; transition: background 0.2s;
-  }
-  .grabacion-box:hover .grabacion-icon { background: var(--black); }
-  .grabacion-info-label {
-    font-size: 10px; font-weight: 700; letter-spacing: 3px;
-    text-transform: uppercase; opacity: 0.5; margin-bottom: 6px;
-  }
-  .grabacion-info-title { font-size: 18px; font-weight: 900; margin-bottom: 4px; }
-  .grabacion-info-sub { font-size: 13px; opacity: 0.6; }
-  .grabacion-link {
-    margin-left: auto; min-width: fit-content;
-    display: inline-block;
-    background: var(--black); color: var(--white);
-    font-size: 12px; font-weight: 700; letter-spacing: 1px;
-    text-transform: uppercase; text-decoration: none;
-    padding: 12px 24px; border-radius: 100px;
-    transition: background 0.2s;
-  }
-  .grabacion-box:hover .grabacion-link { background: var(--black); color: var(--white); }
-  .grabacion-pending {
-    font-size: 13px; font-weight: 700; opacity: 0.4; text-transform: uppercase; letter-spacing: 1px;
-    margin-left: auto;
-  }
-  @media (max-width: 600px) {
-    .grabacion-box { flex-direction: column; align-items: flex-start; }
-    .grabacion-link, .grabacion-pending { margin-left: 0; }
-  }
-
-  /* ── NAV ENCUENTROS ── */
-  .sub-nav {
-    padding: 32px 0; border-top: 2px solid var(--black);
-    display: flex; justify-content: space-between; align-items: center; gap: 16px;
-  }
-  .sub-nav-btn {
-    display: inline-flex; align-items: center; gap: 8px;
-    font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
-    padding: 12px 24px; border-radius: 100px;
-    border: 2px solid var(--black); cursor: pointer;
-    transition: background 0.2s;
-  }
-  .sub-nav-btn:hover { background: var(--lime); border-color: var(--lime); }
-  .sub-nav-btn.disabled { opacity: 0.3; pointer-events: none; }
-
-  /* ── GLOSARIO ── */
+  /* ── GLOSARIO HOME SECTION ── */
   .glosario-section { padding: 72px 0; border-top: 2px solid var(--black); }
   .glosario-cta {
     display: flex; align-items: center; justify-content: space-between; gap: 24px;
@@ -380,6 +254,162 @@
   }
   .glossary-def { font-size: 15px; line-height: 1.7; color: #333; }
   .glossary-def strong { color: var(--black); }
+
+  /* ── ENCUENTRO SUBPAGE ── */
+  .subpage-hero {
+    margin-top: 72px;
+    background: var(--black); padding: 60px 40px 48px;
+    position: relative; overflow: hidden;
+  }
+  .back-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+    color: rgba(255,255,255,0.5); cursor: pointer; margin-bottom: 32px;
+    transition: color 0.2s;
+  }
+  .back-btn:hover { color: var(--lime); }
+  .subpage-eyebrow {
+    font-size: 11px; font-weight: 700; letter-spacing: 3px;
+    color: var(--mid-gray); text-transform: uppercase; margin-bottom: 12px;
+  }
+  .subpage-title {
+    font-size: clamp(32px, 5vw, 68px);
+    font-weight: 900; line-height: 0.95;
+    color: var(--white); text-transform: uppercase; letter-spacing: -2px;
+  }
+  .subpage-title .highlight {
+    display: inline-block;
+    background: var(--lime); color: var(--black);
+    padding: 0 10px; transform: rotate(-1deg); line-height: 1.1;
+  }
+  .subpage-fecha {
+    margin-top: 20px; font-size: 13px; font-weight: 700; letter-spacing: 2px;
+    color: rgba(255,255,255,0.35); text-transform: uppercase;
+  }
+  .subpage-deco {
+    position: absolute; right: -60px; top: -60px;
+    width: 320px; height: 320px;
+    background: var(--lime); border-radius: 50%;
+    opacity: 0.06; pointer-events: none;
+  }
+
+  /* ── CONTENT SECTIONS ── */
+  .content-section { padding: 64px 0; }
+  .content-section + .content-section { border-top: 2px solid var(--black); }
+  .content-section.alt { background: #f7f7f5; padding: 64px 0; }
+
+  .content-title {
+    font-size: clamp(22px, 3vw, 30px); font-weight: 900;
+    text-transform: uppercase; letter-spacing: -0.5px; margin-bottom: 24px;
+  }
+  .content-title .accent { background: var(--lime); padding: 0 6px; }
+
+  .content-body { font-size: clamp(15px, 2vw, 17px); line-height: 1.75; color: #2a2a2a; }
+  .content-body + .content-body { margin-top: 16px; }
+
+  /* ── IDEAS CLAVE ── */
+  .ideas-list { display: flex; flex-direction: column; gap: 12px; margin-top: 24px; }
+  .idea-item {
+    display: flex; align-items: flex-start; gap: 14px;
+    background: var(--gray); border-radius: 14px; padding: 16px 20px;
+    border: 2px solid transparent; transition: border-color 0.2s, transform 0.2s;
+  }
+  .idea-item:hover { border-color: var(--lime); transform: translateX(4px); }
+  .idea-icon {
+    width: 26px; height: 26px; min-width: 26px;
+    background: var(--lime); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 900; margin-top: 2px;
+  }
+  .idea-text { font-size: 14px; line-height: 1.6; color: #333; }
+
+  /* ── GRABACIÓN ── */
+  .grabacion-box {
+    margin-top: 32px;
+    border: 2px solid var(--black); border-radius: 20px; padding: 32px;
+    display: flex; align-items: center; gap: 24px;
+    transition: background 0.2s;
+  }
+  .grabacion-box:hover { background: var(--lime); }
+  .grabacion-icon {
+    width: 56px; height: 56px; min-width: 56px;
+    background: var(--black); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; transition: background 0.2s;
+  }
+  .grabacion-info-label {
+    font-size: 10px; font-weight: 700; letter-spacing: 3px;
+    text-transform: uppercase; opacity: 0.5; margin-bottom: 6px;
+  }
+  .grabacion-info-title { font-size: 18px; font-weight: 900; margin-bottom: 4px; }
+  .grabacion-info-sub { font-size: 13px; opacity: 0.6; }
+  .grabacion-link {
+    margin-left: auto; min-width: fit-content;
+    display: inline-block;
+    background: var(--black); color: var(--white);
+    font-size: 12px; font-weight: 700; letter-spacing: 1px;
+    text-transform: uppercase; text-decoration: none;
+    padding: 12px 24px; border-radius: 100px;
+    transition: background 0.2s;
+  }
+  .grabacion-box:hover .grabacion-link { background: var(--black); color: var(--white); }
+  .grabacion-pending {
+    font-size: 13px; font-weight: 700; opacity: 0.4; text-transform: uppercase; letter-spacing: 1px;
+    margin-left: auto;
+  }
+  @media (max-width: 600px) {
+    .grabacion-box { flex-direction: column; align-items: flex-start; }
+    .grabacion-link, .grabacion-pending { margin-left: 0; }
+  }
+
+  /* ── ENCUESTA ── */
+  .encuesta-box {
+    margin-top: 16px;
+    border: 2px solid var(--black); border-radius: 20px; padding: 28px 32px;
+    display: flex; align-items: center; gap: 24px;
+    background: var(--gray);
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .encuesta-box:hover { background: var(--lime); border-color: var(--black); }
+  .encuesta-icon {
+    width: 48px; height: 48px; min-width: 48px;
+    background: var(--white); border: 2px solid var(--black); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+  }
+  .encuesta-info-label {
+    font-size: 10px; font-weight: 700; letter-spacing: 3px;
+    text-transform: uppercase; opacity: 0.5; margin-bottom: 4px;
+  }
+  .encuesta-info-title { font-size: 16px; font-weight: 900; margin-bottom: 2px; }
+  .encuesta-info-sub { font-size: 12px; opacity: 0.6; }
+  .encuesta-link {
+    margin-left: auto; min-width: fit-content;
+    display: inline-block;
+    background: var(--black); color: var(--white);
+    font-size: 12px; font-weight: 700; letter-spacing: 1px;
+    text-transform: uppercase; text-decoration: none;
+    padding: 12px 24px; border-radius: 100px;
+  }
+  @media (max-width: 600px) {
+    .encuesta-box { flex-direction: column; align-items: flex-start; }
+    .encuesta-link { margin-left: 0; }
+  }
+
+  /* ── NAV ENCUENTROS ── */
+  .sub-nav {
+    padding: 32px 0; border-top: 2px solid var(--black);
+    display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  }
+  .sub-nav-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+    padding: 12px 24px; border-radius: 100px;
+    border: 2px solid var(--black); cursor: pointer;
+    transition: background 0.2s; background: transparent;
+  }
+  .sub-nav-btn:hover { background: var(--lime); border-color: var(--lime); }
+  .sub-nav-btn.disabled { opacity: 0.3; pointer-events: none; }
 
   /* ── LIME BAR ── */
   .lime-bar { height: 6px; background: var(--lime); }
@@ -429,7 +459,7 @@
   <!-- TICKER -->
   <div class="ticker-wrap">
     <div class="ticker-inner">
-      <span>Edición 1.26</span><span>12 Encuentros en Vivo</span><span>Martes 18:30hs</span><span>15 cupos</span><span>Inicio 02 de Junio 2026</span><span>IA como Copiloto</span><span>Hiring Humans Not Resources</span><span>Edición 1.26</span><span>12 Encuentros en Vivo</span><span>Martes 18:30hs</span><span>15 cupos</span><span>Inicio 02 de Junio 2026</span><span>IA como Copiloto</span><span>Hiring Humans Not Resources</span>
+      <span>Edición 1.26</span><span>12 Encuentros en Vivo</span><span>Martes 18:30hs</span><span>Inicio 02 de Junio 2026</span><span>IA como Copiloto</span><span>Hiring Humans Not Resources</span><span>Edición 1.26</span><span>12 Encuentros en Vivo</span><span>Martes 18:30hs</span><span>Inicio 02 de Junio 2026</span><span>IA como Copiloto</span><span>Hiring Humans Not Resources</span>
     </div>
   </div>
 
@@ -511,7 +541,7 @@
           <p class="fac-name">Tati Asencio</p>
           <p class="fac-desc">HR Business Partner | Employee Experience & DEI | People & Culture | Lic. en RRHH. Referente en talento real, menos sesgo e inclusión en los procesos.</p>
           <span class="fac-tag">Cápsula Inclusión</span>
-          <a class="fac-linkedin" href="https://www.linkedin.com/in/estefanía-asencio/" target="_blank">LinkedIn →</a>
+          <a class="fac-linkedin" href="https://www.linkedin.com/in/estefan%C3%ADa-asencio/" target="_blank">LinkedIn →</a>
         </div>
       </div>
     </div>
@@ -521,99 +551,76 @@
   <section class="encuentros-section">
     <div class="container">
       <span class="section-label">Los encuentros</span>
-      <p style="font-size:15px; color:#555; margin-bottom: 0; margin-top: 4px;">Hacé clic en cualquier encuentro para ver el resumen, las ideas clave y el acceso a la grabación.</p>
+      <p style="font-size:15px; color:#555; margin-top: 4px;">Hacé clic en cualquier encuentro para ver el resumen, las ideas clave y el acceso a la grabación.</p>
       <div class="encuentros-grid" style="margin-top: 28px;">
 
         <div class="encuentro-card kick-off" onclick="goToEncuentro(0)">
-          <div class="encuentro-status upcoming" id="status-0"></div>
           <div class="encuentro-num">00</div>
           <p class="encuentro-titulo">Kick-off</p>
           <p class="encuentro-fecha">02 Jun · 18:30hs</p>
           <span class="encuentro-arrow">→</span>
         </div>
-
         <div class="encuentro-card" onclick="goToEncuentro(1)">
-          <div class="encuentro-status" id="status-1"></div>
           <div class="encuentro-num">01</div>
           <p class="encuentro-titulo">Discovery Call</p>
           <p class="encuentro-fecha">09 Jun · 18:30hs</p>
           <span class="encuentro-arrow">→</span>
         </div>
-
         <div class="encuentro-card" onclick="goToEncuentro(2)">
-          <div class="encuentro-status" id="status-2"></div>
           <div class="encuentro-num">02</div>
           <p class="encuentro-titulo">Job Description</p>
           <p class="encuentro-fecha">16 Jun · 18:30hs</p>
           <span class="encuentro-arrow">→</span>
         </div>
-
         <div class="encuentro-card" onclick="goToEncuentro(3)">
-          <div class="encuentro-status" id="status-3"></div>
           <div class="encuentro-num">03</div>
           <p class="encuentro-titulo">Perfil: Generalista & IT</p>
           <p class="encuentro-fecha">23 Jun · 18:30hs</p>
           <span class="encuentro-arrow">→</span>
         </div>
-
         <div class="encuentro-card" onclick="goToEncuentro(4)">
-          <div class="encuentro-status" id="status-4"></div>
           <div class="encuentro-num">04</div>
           <p class="encuentro-titulo">Sourcing & Boolean</p>
           <p class="encuentro-fecha">30 Jun · 18:30hs</p>
           <span class="encuentro-arrow">→</span>
         </div>
-
         <div class="encuentro-card capsula" onclick="goToEncuentro(5)">
-          <div class="encuentro-status" id="status-5"></div>
           <div class="encuentro-num">★</div>
           <p class="encuentro-titulo">Cápsula IA</p>
           <p class="encuentro-fecha">Por confirmar</p>
           <span class="encuentro-arrow">→</span>
         </div>
-
         <div class="encuentro-card" onclick="goToEncuentro(6)">
-          <div class="encuentro-status" id="status-6"></div>
           <div class="encuentro-num">05</div>
           <p class="encuentro-titulo">Copywriting & Abordaje</p>
           <p class="encuentro-fecha">07 Jul · 18:30hs</p>
           <span class="encuentro-arrow">→</span>
         </div>
-
         <div class="encuentro-card" onclick="goToEncuentro(7)">
-          <div class="encuentro-status" id="status-7"></div>
           <div class="encuentro-num">06</div>
           <p class="encuentro-titulo">Entrevista Conductual</p>
           <p class="encuentro-fecha">14 Jul · 18:30hs</p>
           <span class="encuentro-arrow">→</span>
         </div>
-
         <div class="encuentro-card capsula" onclick="goToEncuentro(8)">
-          <div class="encuentro-status" id="status-8"></div>
           <div class="encuentro-num">★</div>
           <p class="encuentro-titulo">Cápsula Entrevistas</p>
           <p class="encuentro-fecha">Por confirmar</p>
           <span class="encuentro-arrow">→</span>
         </div>
-
         <div class="encuentro-card capsula" onclick="goToEncuentro(9)">
-          <div class="encuentro-status" id="status-9"></div>
           <div class="encuentro-num">★</div>
           <p class="encuentro-titulo">Cápsula Inclusión</p>
           <p class="encuentro-fecha">Por confirmar</p>
           <span class="encuentro-arrow">→</span>
         </div>
-
         <div class="encuentro-card" onclick="goToEncuentro(10)">
-          <div class="encuentro-status" id="status-10"></div>
           <div class="encuentro-num">07</div>
           <p class="encuentro-titulo">Informe & Métricas</p>
           <p class="encuentro-fecha">21 Jul · 18:30hs</p>
           <span class="encuentro-arrow">→</span>
         </div>
-
         <div class="encuentro-card" onclick="goToEncuentro(11)">
-          <div class="encuentro-status" id="status-11"></div>
           <div class="encuentro-num">08</div>
           <p class="encuentro-titulo">Cierre & Ética</p>
           <p class="encuentro-fecha">28 Jul · 18:30hs</p>
@@ -629,7 +636,7 @@
     <div class="container">
       <span class="section-label">Glosario</span>
       <div class="glosario-cta" onclick="goToGlosario()">
-        <div class="glosario-cta-left">
+        <div>
           <p class="glosario-cta-tag">📖 Recurso del Squad</p>
           <h2 class="glosario-cta-title">El <span class="highlight">diccionario</span><br>del Hunter Estratégico</h2>
           <p class="glosario-cta-sub">Términos, conceptos y lenguaje que construimos en cada encuentro.</p>
@@ -648,30 +655,22 @@
 
 </div><!-- /page-home -->
 
-
 <!-- ═══════════════════════════════════════════════
-     ENCUENTRO SUBPAGES (generated by JS)
+     ENCUENTRO SUBPAGES
 ════════════════════════════════════════════════ -->
-<div id="page-encuentro" class="page">
-  <!-- Content injected by JS -->
-</div>
+<div id="page-encuentro" class="page"></div>
 
 <!-- ═══════════════════════════════════════════════
      GLOSARIO SUBPAGE
 ════════════════════════════════════════════════ -->
-<div id="page-glosario" class="page">
-  <!-- Content injected by JS -->
-</div>
+<div id="page-glosario" class="page"></div>
 
 <script>
-// ── DATA ──────────────────────────────────────────────
+// ── ENCUENTROS DATA ──────────────────────────────────────────────
 const encuentros = [
   {
-    num: "00",
-    titulo: "Kick-off",
-    subtitulo: "Mindset, ADN Kodo & Journey del reclutador",
-    fecha: "02 de Junio de 2026",
-    tipo: "kickoff",
+    num: "00", titulo: "Kick-off", subtitulo: "Mindset, ADN Kodo & el Triángulo de Oro",
+    fecha: "02 de Junio de 2026", tipo: "kickoff",
     resumen: "El encuentro de arranque donde construimos las bases filosóficas y metodológicas del programa. Definimos el propósito del reclutamiento estratégico, los 4 pilares del ADN Kodo y el Triángulo de Oro como herramienta central de toda búsqueda.",
     ideasClave: [
       { icon: "🌉", texto: "El propósito: somos el puente entre una necesidad de negocio y una oportunidad que cambia vidas. La empresa tiene una silla vacía que cuesta tiempo y dinero; la persona tiene una oportunidad que puede cambiar el rumbo de su vida." },
@@ -680,252 +679,160 @@ const encuentros = [
       { icon: "💬", texto: "Debate del Kick-off: un cliente pide un Senior de Marketing Digital con 5 años de experiencia, para empezar en 2 semanas, con sueldo de mercado junior. ¿Qué vértice está roto? → El de Recursos. El valor del reclutador estratégico está en señalarlo a tiempo y proponer ajustes, no en ejecutar una búsqueda condenada al fracaso." },
     ],
     grabacion: "https://drive.google.com/file/d/1H3poiBXMu8Dm7poB2qetF8PrSjekVF5g/view?usp=sharing",
-    grabacionLabel: "Encuentro 00 — Kick-off"
+    grabacionLabel: "Encuentro 00 — Kick-off",
+    encuesta: "https://docs.google.com/forms/d/e/1FAIpQLSelERR3ACGAbT3hU_vax35IKll3gtQf_-jBb9tsc2Lik9Nmfg/viewform"
   },
   {
-    num: "01",
-    titulo: "Discovery Call",
-    subtitulo: "El arte de entender antes de buscar",
-    fecha: "09 de Junio de 2026",
-    tipo: "sesion",
+    num: "01", titulo: "Discovery Call", subtitulo: "El arte de entender antes de buscar",
+    fecha: "09 de Junio de 2026", tipo: "sesion",
     resumen: "La Discovery Call es la conversación que lo cambia todo. Aprendemos a hacer las preguntas correctas al cliente interno antes de arrancar cualquier búsqueda — porque reclutar sin entender el contexto es disparar al aire.",
     ideasClave: [
       { icon: "🔍", texto: "Antes de buscar candidatos, hay que entender el por qué de la posición: ¿crecimiento, reemplazo, urgencia del negocio?" },
       { icon: "💬", texto: "Preguntas que revelan: cómo pasar de un brief superficial a un brief estratégico." },
       { icon: "🤝", texto: "La Discovery Call como primer movimiento de posicionamiento: ya en ese momento, sos un socio estratégico o un operario." },
     ],
-    grabacion: null,
-    grabacionLabel: "Encuentro 01 — Discovery Call"
+    grabacion: null, grabacionLabel: "Encuentro 01 — Discovery Call",
+    encuesta: "https://docs.google.com/forms/d/e/1FAIpQLScVsyVAXx14jX3XWFxVHLQhi-naCJ3PxAMbs_xsQUO5ac2_tA/viewform?usp=publish-editor"
   },
   {
-    num: "02",
-    titulo: "Job Description",
-    subtitulo: "Escribir para atraer, no para filtrar",
-    fecha: "16 de Junio de 2026",
-    tipo: "sesion",
+    num: "02", titulo: "Job Description", subtitulo: "Escribir para atraer, no para filtrar",
+    fecha: "16 de Junio de 2026", tipo: "sesion",
     resumen: "Las descripciones de puesto convencionales ahuyentan talento. En este encuentro diseñamos Job Descriptions que comunican cultura, despiertan interés real y atraen al perfil que realmente necesitamos.",
     ideasClave: [
       { icon: "✍️", texto: "La diferencia entre una JD que excluye y una que convoca. Cómo reescribir desde el atractivo." },
       { icon: "📋", texto: "Estructura de una JD estratégica: qué va, qué sobra y qué nunca debería faltar." },
       { icon: "🎯", texto: "Lenguaje inclusivo y no sesgado: cómo las palabras que elegimos construyen (o destruyen) diversidad desde el inicio." },
     ],
-    grabacion: null,
-    grabacionLabel: "Encuentro 02 — Job Description"
+    grabacion: null, grabacionLabel: "Encuentro 02 — Job Description",
+    encuesta: "https://docs.google.com/forms/d/e/1FAIpQLSehbbnuCshd5dcvOaOfsBFjClvH71uVZ5KoE0Jz7__oo0QiDA/viewform?usp=publish-editor"
   },
   {
-    num: "03",
-    titulo: "Perfil: Generalista & IT",
-    subtitulo: "Leer entre líneas del mercado",
-    fecha: "23 de Junio de 2026",
-    tipo: "sesion",
+    num: "03", titulo: "Perfil: Generalista & IT", subtitulo: "Leer entre líneas del mercado",
+    fecha: "23 de Junio de 2026", tipo: "sesion",
     resumen: "Perfiles generalistas e IT tienen lógicas de mercado distintas. En este encuentro aprendemos a construir el perfil real (no el wishlist del manager) y a hablar con propiedad sobre stacks, seniorities y expectativas de cada mundo.",
     ideasClave: [
       { icon: "🧩", texto: "El perfil idealista vs. el perfil viable: cómo negociar con el cliente interno y llegar a un perfil que el mercado pueda satisfacer." },
       { icon: "💻", texto: "Lógica de los perfiles IT: stacks, seniorities, culturas de trabajo remoto y cómo leer un CV técnico sin ser desarrolladora." },
       { icon: "🏢", texto: "Perfiles generalistas: ¿qué skills son transferibles y qué es realmente innegociable?" },
     ],
-    grabacion: null,
-    grabacionLabel: "Encuentro 03 — Perfil Generalista & IT"
+    grabacion: null, grabacionLabel: "Encuentro 03 — Perfil Generalista & IT",
+    encuesta: "https://docs.google.com/forms/d/e/1FAIpQLSfsNZ9jBLPvoCl4-13dVvqnE28PGCRb7Ref9k4eqFS1aVTUEA/viewform?usp=dialog"
   },
   {
-    num: "04",
-    titulo: "Sourcing & Boolean",
-    subtitulo: "Encontrar a quienes no te están buscando",
-    fecha: "30 de Junio de 2026",
-    tipo: "sesion",
+    num: "04", titulo: "Sourcing & Boolean", subtitulo: "Encontrar a quienes no te están buscando",
+    fecha: "30 de Junio de 2026", tipo: "sesion",
     resumen: "El talento que necesitás rara vez está buscando activamente. Aprenderemos a construir strings de búsqueda, explotar LinkedIn al máximo y salir de los portales convencionales para encontrar perfiles que la competencia no ve.",
     ideasClave: [
       { icon: "🔗", texto: "Lógica Boolean: AND, OR, NOT. Cómo combinar operadores para afinar resultados en LinkedIn y Google." },
       { icon: "🎣", texto: "Técnicas de outbound sourcing: dónde están los perfiles pasivos y cómo acercarte sin sonar a mass mail." },
       { icon: "📊", texto: "Portales, comunidades, GitHub, Foros: el mapa completo de dónde vive el talento según el perfil." },
     ],
-    grabacion: null,
-    grabacionLabel: "Encuentro 04 — Sourcing & Boolean"
+    grabacion: null, grabacionLabel: "Encuentro 04 — Sourcing & Boolean",
+    encuesta: "https://docs.google.com/forms/d/e/1FAIpQLSfLsmkKaDrtRnhyxKrXH8Zk1rYqy2lWMgAuQ6wNWWVgT7G9Rw/viewform?usp=publish-editor"
   },
   {
-    num: "★",
-    titulo: "Cápsula — IA",
-    subtitulo: "Con Agostina Bobarini",
-    fecha: "Fecha por confirmar",
-    tipo: "capsula",
+    num: "★", titulo: "Cápsula — IA", subtitulo: "Con Agostina Bobarini",
+    fecha: "Fecha por confirmar", tipo: "capsula",
     resumen: "Agostina Bobarini, Product Owner y especialista en IA generativa, toma el mando para mostrar cómo usar la inteligencia artificial como copiloto real del proceso de selección — no como moda, sino como multiplicador de impacto.",
     ideasClave: [
       { icon: "🤖", texto: "Prompts concretos para sourcing inteligente: cómo pedirle a la IA que busque lo que vos no podés buscar a mano." },
       { icon: "✍️", texto: "Copywriting conversacional con IA: mensajes de abordaje, JDs y comunicación con candidatos en minutos." },
       { icon: "⚖️", texto: "El factor humano vs. automatización: qué delegar a la IA y dónde la intuición del reclutador es insustituible." },
     ],
-    grabacion: null,
-    grabacionLabel: "Cápsula IA — con Agostina Bobarini"
+    grabacion: null, grabacionLabel: "Cápsula IA — con Agostina Bobarini",
+    encuesta: "https://docs.google.com/forms/d/e/1FAIpQLSc3FpJ9l4qEbWIvtmTf1nyeJhivtlAufbBpgDlmdI8dHOwn3A/viewform?usp=publish-editor"
   },
   {
-    num: "05",
-    titulo: "Copywriting & Abordaje",
-    subtitulo: "Mensajes que abren puertas (+ disección de CV)",
-    fecha: "07 de Julio de 2026",
-    tipo: "sesion",
+    num: "05", titulo: "Copywriting & Abordaje", subtitulo: "Mensajes que abren puertas (+ disección de CV)",
+    fecha: "07 de Julio de 2026", tipo: "sesion",
     resumen: "La mayoría de los mensajes de reclutamiento se ignoran. En este encuentro aprendemos a escribir abordajes que generan respuesta real, y entrenamos el ojo para diseccionar un CV más allá del formato.",
     ideasClave: [
       { icon: "📩", texto: "Anatomía de un mensaje que funciona: personalización, propuesta de valor clara y llamada a la acción sin presión." },
       { icon: "🚫", texto: "Los errores más comunes del abordaje masivo: por qué el copy genérico destruye la marca empleadora." },
       { icon: "📄", texto: "Disección de CV: qué leer primero, qué señales buscar y cómo evitar que los sesgos guíen la lectura." },
     ],
-    grabacion: null,
-    grabacionLabel: "Encuentro 05 — Copywriting & Abordaje"
+    grabacion: null, grabacionLabel: "Encuentro 05 — Copywriting & Abordaje",
+    encuesta: "https://docs.google.com/forms/d/e/1FAIpQLSdY80NHsK-cllfFrUtkgAbAf63PaxYszhENbWBvqrIJ1TD0OA/viewform?usp=publish-editor"
   },
   {
-    num: "06",
-    titulo: "Entrevista Conductual",
-    subtitulo: "Preguntar para entender, no para confirmar",
-    fecha: "14 de Julio de 2026",
-    tipo: "sesion",
+    num: "06", titulo: "Entrevista Conductual", subtitulo: "Preguntar para entender, no para confirmar",
+    fecha: "14 de Julio de 2026", tipo: "sesion",
     resumen: "La entrevista es el corazón del proceso. Aprenderemos la técnica STAR, la construcción de preguntas que revelan comportamientos reales y cómo dar feedback que suma valor al candidato y al cliente.",
     ideasClave: [
       { icon: "❓", texto: "Técnica STAR: Situación, Tarea, Acción, Resultado. Cómo usarla para obtener evidencia concreta en lugar de respuestas ensayadas." },
       { icon: "🎭", texto: "Arquetipos de candidatos y cómo leer más allá de lo que dicen: lenguaje corporal, gestión de la incertidumbre y coherencia narrativa." },
       { icon: "📝", texto: "El feedback estratégico: cómo reportar al cliente interno de forma que posicione tu criterio y genere confianza." },
     ],
-    grabacion: null,
-    grabacionLabel: "Encuentro 06 — Entrevista Conductual"
+    grabacion: null, grabacionLabel: "Encuentro 06 — Entrevista Conductual",
+    encuesta: "https://docs.google.com/forms/d/e/1FAIpQLSdSzYdALh61iHwijnO1Y-oqAiQO43gbdit-jYoz2mjy4zrYcg/viewform?usp=publish-editor"
   },
   {
-    num: "★",
-    titulo: "Cápsula — Entrevistas",
-    subtitulo: "Con María Laura Amaya",
-    fecha: "Fecha por confirmar",
-    tipo: "capsula",
-    resumen: "María Laura Amaya, Coach y mentora con +12 años liderando equipos, nos acompaña para profundizar en lo que hace que una entrevista sea verdaderamente transformadora: el poder de las preguntas y la escucha real.",
+    num: "★", titulo: "Cápsula — Entrevistas", subtitulo: "Con María Laura Amaya",
+    fecha: "Fecha por confirmar", tipo: "capsula",
+    resumen: "María Laura Amaya, Coach y mentora, nos acompaña para profundizar en lo que hace que una entrevista sea verdaderamente transformadora: el poder de las preguntas y la escucha real.",
     ideasClave: [
       { icon: "👂", texto: "Escucha activa: la diferencia entre escuchar para responder y escuchar para entender." },
       { icon: "🔁", texto: "La repregunta como herramienta: cuándo profundizar, cuándo redirigir y cuándo simplemente quedarse en silencio." },
       { icon: "🪞", texto: "Dejar de asumir: cómo los supuestos propios distorsionan la lectura del candidato y cómo entrenar la mente para detectarlos." },
     ],
-    grabacion: null,
-    grabacionLabel: "Cápsula Entrevistas — con María Laura Amaya"
+    grabacion: null, grabacionLabel: "Cápsula Entrevistas — con María Laura Amaya",
+    encuesta: "https://docs.google.com/forms/d/e/1FAIpQLSckjxZRO0euX-vdGHJNl462vcdVmoJC36DK0U-owZpQG7p3Uw/viewform?usp=publish-editor"
   },
   {
-    num: "★",
-    titulo: "Cápsula — Inclusión",
-    subtitulo: "Con Tati Asencio",
-    fecha: "Fecha por confirmar",
-    tipo: "capsula",
+    num: "★", titulo: "Cápsula — Inclusión", subtitulo: "Con Tati Asencio",
+    fecha: "Fecha por confirmar", tipo: "capsula",
     resumen: "Tati Asencio, HR Business Partner y referente en DEI, nos lleva a través del modelo inclusivo de selección: cómo los procesos pueden activamente construir diversidad en lugar de replicar sesgos históricos.",
     ideasClave: [
       { icon: "🌍", texto: "Puntos ciegos en el proceso de selección: sesgos inconscientes que se cuelan en la JD, el sourcing y la entrevista." },
       { icon: "📋", texto: "Perfiles que no excluyan: cómo escribir descripciones, evaluar candidatos y tomar decisiones desde un marco inclusivo." },
       { icon: "🤖", texto: "IA e inclusión: oportunidades y riesgos del uso de tecnología en la selección desde una perspectiva DEI." },
     ],
-    grabacion: null,
-    grabacionLabel: "Cápsula Inclusión — con Tati Asencio"
+    grabacion: null, grabacionLabel: "Cápsula Inclusión — con Tati Asencio",
+    encuesta: "https://docs.google.com/forms/d/e/1FAIpQLSfLwrPJ-cSRPgvONE0YTLTmvEzBcCIwEBgFfW4BqYtUmIPT5A/viewform?usp=publish-editor"
   },
   {
-    num: "07",
-    titulo: "Informe & Métricas",
-    subtitulo: "Hablar el lenguaje del negocio",
-    fecha: "21 de Julio de 2026",
-    tipo: "sesion",
+    num: "07", titulo: "Informe & Métricas", subtitulo: "Hablar el lenguaje del negocio",
+    fecha: "21 de Julio de 2026", tipo: "sesion",
     resumen: "Un reclutador estratégico mide, reporta y defiende su trabajo con datos. Aprenderemos a construir informes que informen de verdad y a usar métricas como Time to Hire y Calidad de Contratación para posicionarnos como socios del negocio.",
     ideasClave: [
       { icon: "📊", texto: "Time to Hire, Quality of Hire, Source of Hire: las métricas que importan y cómo calcularlas sin complicaciones." },
       { icon: "📑", texto: "El informe estratégico: qué incluir, qué omitir y cómo presentar avances de búsqueda que generen confianza (no defensividad)." },
       { icon: "💼", texto: "Defender el trabajo: cómo usar datos para rebatir objeciones del cliente interno y demostrar el valor del proceso." },
     ],
-    grabacion: null,
-    grabacionLabel: "Encuentro 07 — Informe & Métricas"
+    grabacion: null, grabacionLabel: "Encuentro 07 — Informe & Métricas",
+    encuesta: "https://docs.google.com/forms/d/e/1FAIpQLSftSpJxFv7XhQcWyAg3MiCRZJoipzoQX2LJfj1B_A1_Kmno4g/viewform?usp=publish-editor"
   },
   {
-    num: "08",
-    titulo: "Cierre & Ética",
-    subtitulo: "Contraoferta, ghosting y candidate experience",
-    fecha: "28 de Julio de 2026",
-    tipo: "sesion",
+    num: "08", titulo: "Cierre & Ética", subtitulo: "Contraoferta, ghosting y candidate experience",
+    fecha: "28 de Julio de 2026", tipo: "sesion",
     resumen: "El cierre de un proceso es donde se gana o se pierde la reputación. Abordamos las situaciones más difíciles del reclutamiento — contraoferta, ghosting, rechazo — y construimos el código ético que guía cada decisión.",
     ideasClave: [
       { icon: "🤝", texto: "Contraoferta: cómo anticiparla, cómo trabajarla con el candidato antes de que aparezca y cómo manejar el momento si llega." },
       { icon: "👻", texto: "Ghosting (en ambas direcciones): causas reales, cómo prevenirlo y cómo gestionarlo sin que destruya la relación." },
       { icon: "⭐", texto: "Candidate experience como marca: cada interacción en el proceso es una comunicación de quiénes somos como empleadores." },
     ],
-    grabacion: null,
-    grabacionLabel: "Encuentro 08 — Cierre & Ética"
+    grabacion: null, grabacionLabel: "Encuentro 08 — Cierre & Ética",
+    encuesta: "https://docs.google.com/forms/d/e/1FAIpQLSeo6gwP6OineIFKI9b_TSy3Le3zeomdKNw63NGjBtT_qajF3g/viewform?usp=publish-editor"
   },
 ];
 
 // ── GLOSARIO DATA ──────────────────────────────────────────────
 const glosario = [
-  {
-    term: "Triángulo de Oro",
-    tag: "Kick-off",
-    def: "Los tres vértices que equilibran toda búsqueda: <strong>Alcance</strong> (¿qué perfil busco? → calidad), <strong>Tiempos</strong> (¿cuándo lo necesito? → plazo) y <strong>Recursos</strong> (¿cuánto presupuesto hay? → volumen). Funcionan como palancas: si uno se rompe, el reclutador estratégico lo señala y ajusta los otros dos en lugar de ejecutar una búsqueda condenada."
-  },
-  {
-    term: "Vértice Roto",
-    tag: "Kick-off",
-    def: "Cuando uno de los tres ejes del Triángulo de Oro no es viable. Ej: un cliente pide un perfil senior con urgencia de dos semanas pero ofrece salario junior → el vértice de Recursos está roto. El valor estratégico está en detectarlo a tiempo y plantearlo al cliente antes de iniciar la búsqueda."
-  },
-  {
-    term: "Doble Clic",
-    tag: "ADN Kodo",
-    def: "Término Kodo para profundizar más allá de lo superficial. Cuando algo no cierra — un requisito, una objeción, una necesidad — se hace doble clic: se pregunta, se indaga, se cuestiona. Es la actitud que diferencia al reclutador estratégico del operativo."
-  },
-  {
-    term: "Hiring Humans, Not Resources",
-    tag: "ADN Kodo",
-    def: "Pilar de empatía del ADN Kodo. Cada CV es una historia, no un archivo. El reclutamiento es un acto profundamente humano: del otro lado hay expectativas, miedos, proyectos de vida. Este principio guía cómo nos comunicamos, cómo entrevistamos y cómo damos feedback."
-  },
-  {
-    term: "Cliente Interno",
-    tag: "Estrategia",
-    def: "El manager, área o referente dentro de la organización que solicita la búsqueda. A diferencia del candidato, el cliente interno define los criterios del rol. Trabajar estratégicamente con el cliente interno implica no solo ejecutar su pedido sino cuestionarlo, calibrarlo y educarlo sobre el mercado."
-  },
-  {
-    term: "Reclutador/a Estratégico/a",
-    tag: "Mindset",
-    def: "Quien trasciende la ejecución operativa para comprender el negocio, cuestionar las búsquedas desde el origen y posicionarse como socio/a de decisiones. No espera que le lleguen los requerimientos: los construye junto al cliente. No llena posiciones: resuelve problemas de negocio."
-  },
-  {
-    term: "Perfil Idealista vs. Perfil Viable",
-    tag: "Estrategia",
-    def: "El <strong>perfil idealista</strong> es el wishlist del manager: todos los requisitos que desearía en un candidato perfecto. El <strong>perfil viable</strong> es lo que el mercado puede ofrecer dentro del presupuesto y el tiempo disponibles. El trabajo estratégico está en negociar esa brecha con el cliente interno."
-  },
-  {
-    term: "Discovery Call",
-    tag: "Sesión 01",
-    def: "Primera conversación estratégica con el cliente (interno o externo) antes de iniciar cualquier búsqueda. Su objetivo no es tomar un brief sino entender la <em>necesidad real</em> detrás de la posición: ¿por qué existe este rol? ¿qué problema resuelve? ¿qué pasaría si no se cubre? Es el primer movimiento de posicionamiento estratégico."
-  },
-  {
-    term: "Transparencia Radical",
-    tag: "ADN Kodo",
-    def: "Pilar Kodo. Decir la verdad aunque sea difícil, con candidatos, clientes y equipo. Si una búsqueda es inviable, si el presupuesto no acompaña el perfil pedido, si el proceso no va bien — se blanquea. La honestidad es el único camino para construir confianza a largo plazo."
-  },
-  {
-    term: "Calidad de Contratación",
-    tag: "Métricas",
-    def: "El grado de cumplimiento real de los requisitos del rol una vez la persona está en el puesto. Importante: calidad no siempre es el 100% de los requisitos técnicos. Un perfil que resuelve la necesidad central del negocio con habilidades compensatorias puede tener más calidad que uno que cumple todos los requisitos en papel pero no encaja en la cultura."
-  },
-  {
-    term: "Sourcing",
-    tag: "Sesión 04",
-    def: "Proceso activo de búsqueda de perfiles, especialmente <strong>pasivos</strong> (quienes no están buscando trabajo activamente). El sourcing estratégico va más allá de publicar avisos: incluye Boolean search en LinkedIn, comunidades técnicas, GitHub, foros y cualquier espacio donde viva el talento que se necesita."
-  },
-  {
-    term: "Boolean Search",
-    tag: "Sesión 04",
-    def: "Lógica de búsqueda con operadores lógicos (AND, OR, NOT) para construir strings en LinkedIn y Google que devuelvan resultados precisos. Ejemplo: <em>\"marketing digital\" AND (\"e-commerce\" OR \"retail\") NOT \"freelance\"</em>. Permite encontrar perfiles que ningún aviso convencional alcanzaría."
-  },
-  {
-    term: "Candidate Experience",
-    tag: "Sesión 08",
-    def: "La experiencia que vive una persona candidata a lo largo de todo el proceso de selección: desde el primer contacto hasta la respuesta final. Cada interacción es una comunicación de quiénes somos como empleadores. Una mala experiencia destruye marca, aunque el proceso haya terminado bien."
-  },
-  {
-    term: "Touchpoints",
-    tag: "Journey",
-    def: "Cada uno de los puntos de contacto que tiene el reclutador con los distintos actores del proceso (candidato, cliente, equipo). Mapear los touchpoints permite identificar dónde se generan los momentos WOW, dónde están los dolores (pains) y dónde hay oportunidades de mejora."
-  },
-  {
-    term: "Pains / Gains / Wow",
-    tag: "Journey",
-    def: "Marco del <strong>Journey del Reclutador</strong>: los <em>Pains</em> son los puntos de dolor o fricción del proceso; los <em>Gains</em> son los beneficios y resultados esperados; los <em>Wow</em> son los momentos que superan expectativas y generan lealtad. Usarlo para diseñar un proceso de selección que cuide a todos los actores involucrados."
-  },
+  { term: "Triángulo de Oro", tag: "Kick-off", def: "Los tres vértices que equilibran toda búsqueda: <strong>Alcance</strong> (¿qué perfil busco? → calidad), <strong>Tiempos</strong> (¿cuándo lo necesito? → plazo) y <strong>Recursos</strong> (¿cuánto presupuesto hay? → volumen). Funcionan como palancas: si uno se rompe, el reclutador estratégico lo señala y ajusta los otros dos en lugar de ejecutar una búsqueda condenada." },
+  { term: "Vértice Roto", tag: "Kick-off", def: "Cuando uno de los tres ejes del Triángulo de Oro no es viable. Ej: un cliente pide un perfil senior con urgencia de dos semanas pero ofrece salario junior → el vértice de Recursos está roto. El valor estratégico está en detectarlo a tiempo y plantearlo al cliente antes de iniciar la búsqueda." },
+  { term: "Doble Clic", tag: "ADN Kodo", def: "Término Kodo para profundizar más allá de lo superficial. Cuando algo no cierra — un requisito, una objeción, una necesidad — se hace doble clic: se pregunta, se indaga, se cuestiona. Es la actitud que diferencia al reclutador estratégico del operativo." },
+  { term: "Hiring Humans, Not Resources", tag: "ADN Kodo", def: "Pilar de empatía del ADN Kodo. Cada CV es una historia, no un archivo. El reclutamiento es un acto profundamente humano: del otro lado hay expectativas, miedos, proyectos de vida. Este principio guía cómo nos comunicamos, cómo entrevistamos y cómo damos feedback." },
+  { term: "Cliente Interno", tag: "Estrategia", def: "El manager, área o referente dentro de la organización que solicita la búsqueda. Trabajar estratégicamente con el cliente interno implica no solo ejecutar su pedido sino cuestionarlo, calibrarlo y educarlo sobre el mercado." },
+  { term: "Reclutador/a Estratégico/a", tag: "Mindset", def: "Quien trasciende la ejecución operativa para comprender el negocio, cuestionar las búsquedas desde el origen y posicionarse como socio/a de decisiones. No espera que le lleguen los requerimientos: los construye junto al cliente. No llena posiciones: resuelve problemas de negocio." },
+  { term: "Perfil Idealista vs. Perfil Viable", tag: "Estrategia", def: "El <strong>perfil idealista</strong> es el wishlist del manager: todos los requisitos que desearía en un candidato perfecto. El <strong>perfil viable</strong> es lo que el mercado puede ofrecer dentro del presupuesto y el tiempo disponibles. El trabajo estratégico está en negociar esa brecha con el cliente interno." },
+  { term: "Discovery Call", tag: "Sesión 01", def: "Primera conversación estratégica con el cliente antes de iniciar cualquier búsqueda. Su objetivo no es tomar un brief sino entender la <em>necesidad real</em> detrás de la posición: ¿por qué existe este rol? ¿qué problema resuelve? ¿qué pasaría si no se cubre? Es el primer movimiento de posicionamiento estratégico." },
+  { term: "Transparencia Radical", tag: "ADN Kodo", def: "Pilar Kodo. Decir la verdad aunque sea difícil, con candidatos, clientes y equipo. Si una búsqueda es inviable, si el presupuesto no acompaña el perfil pedido, si el proceso no va bien — se blanquea. La honestidad es el único camino para construir confianza a largo plazo." },
+  { term: "Calidad de Contratación", tag: "Métricas", def: "El grado de cumplimiento real de los requisitos del rol. Calidad no siempre es el 100% de los requisitos técnicos: un perfil que resuelve la necesidad central del negocio con habilidades compensatorias puede tener más calidad que uno que cumple todos los requisitos en papel pero no encaja en la cultura." },
+  { term: "Sourcing", tag: "Sesión 04", def: "Proceso activo de búsqueda de perfiles, especialmente <strong>pasivos</strong> (quienes no están buscando trabajo activamente). El sourcing estratégico va más allá de publicar avisos: incluye Boolean search en LinkedIn, comunidades técnicas, GitHub, foros y cualquier espacio donde viva el talento que se necesita." },
+  { term: "Boolean Search", tag: "Sesión 04", def: "Lógica de búsqueda con operadores lógicos (AND, OR, NOT) para construir strings en LinkedIn y Google que devuelvan resultados precisos. Ejemplo: <em>\"marketing digital\" AND (\"e-commerce\" OR \"retail\") NOT \"freelance\"</em>." },
+  { term: "Candidate Experience", tag: "Sesión 08", def: "La experiencia que vive una persona candidata a lo largo de todo el proceso de selección. Cada interacción es una comunicación de quiénes somos como empleadores. Una mala experiencia destruye marca, aunque el proceso haya terminado bien." },
+  { term: "Touchpoints", tag: "Journey", def: "Cada uno de los puntos de contacto que tiene el reclutador con los distintos actores del proceso (candidato, cliente, equipo). Mapear los touchpoints permite identificar dónde se generan los momentos WOW, dónde están los dolores (pains) y dónde hay oportunidades de mejora." },
+  { term: "Pains / Gains / Wow", tag: "Journey", def: "Marco del Journey del Reclutador: los <em>Pains</em> son los puntos de dolor del proceso; los <em>Gains</em> son los beneficios y resultados esperados; los <em>Wow</em> son los momentos que superan expectativas y generan lealtad." },
 ];
 
 // ── NAVIGATION ──────────────────────────────────────────────
@@ -938,52 +845,6 @@ function goHome() {
   window.scrollTo(0, 0);
 }
 
-function goToGlosario() {
-  renderGlosario();
-  document.getElementById('page-home').classList.remove('active');
-  document.getElementById('page-encuentro').classList.remove('active');
-  document.getElementById('page-glosario').classList.add('active');
-  window.scrollTo(0, 0);
-}
-
-function renderGlosario() {
-  const itemsHTML = glosario.map(g => `
-    <div class="glossary-item">
-      <div>
-        <p class="glossary-term">${g.term}</p>
-        <span class="glossary-tag-inline">${g.tag}</span>
-      </div>
-      <p class="glossary-def">${g.def}</p>
-    </div>
-  `).join('');
-
-  document.getElementById('page-glosario').innerHTML = `
-    <section class="subpage-hero">
-      <div class="subpage-deco"></div>
-      <div class="container">
-        <div class="back-btn" onclick="goHome()">← Volver al índice</div>
-        <p class="subpage-eyebrow">📖 Recurso del Squad</p>
-        <h1 class="subpage-title">El <span class="highlight">diccionario</span><br>del Hunter</h1>
-        <p class="subpage-fecha">Palabras y conceptos que construimos en cada encuentro</p>
-      </div>
-    </section>
-
-    <section class="content-section">
-      <div class="container">
-        <h2 class="content-title"><span class="accent">${glosario.length} términos</span> y sumando</h2>
-        <p class="content-body" style="color:#555; margin-bottom: 0;">El glosario crece con cada sesión. Si algo no está o querés redefinir un término, llevalo al grupo de WhatsApp.</p>
-        <div class="glossary-grid">${itemsHTML}</div>
-      </div>
-    </section>
-
-    <footer>
-      <span class="footer-logo">KODO</span>
-      <span class="footer-meta">Formación en Reclutamiento Estratégico · Edición 1.26</span>
-      <span class="footer-tag">@kodohr_</span>
-    </footer>
-  `;
-}
-
 function goToEncuentro(index) {
   currentEncuentro = index;
   renderEncuentro(index);
@@ -993,6 +854,15 @@ function goToEncuentro(index) {
   window.scrollTo(0, 0);
 }
 
+function goToGlosario() {
+  renderGlosario();
+  document.getElementById('page-home').classList.remove('active');
+  document.getElementById('page-encuentro').classList.remove('active');
+  document.getElementById('page-glosario').classList.add('active');
+  window.scrollTo(0, 0);
+}
+
+// ── RENDER ENCUENTRO ──────────────────────────────────────────────
 function renderEncuentro(index) {
   const e = encuentros[index];
   const prev = index > 0 ? index - 1 : null;
@@ -1025,6 +895,18 @@ function renderEncuentro(index) {
         <p class="grabacion-pending">Próximamente</p>
       </div>`;
 
+  const encuestaHTML = e.encuesta
+    ? `<div class="encuesta-box">
+        <div class="encuesta-icon">⭐</div>
+        <div>
+          <p class="encuesta-info-label">Tu opinión importa</p>
+          <p class="encuesta-info-title">Encuesta de satisfacción</p>
+          <p class="encuesta-info-sub">2 minutos — ayudá a mejorar la formación</p>
+        </div>
+        <a class="encuesta-link" href="${e.encuesta}" target="_blank">Responder →</a>
+      </div>`
+    : '';
+
   const prevBtn = prev !== null
     ? `<button class="sub-nav-btn" onclick="goToEncuentro(${prev})">← ${encuentros[prev].titulo}</button>`
     : `<button class="sub-nav-btn disabled">←</button>`;
@@ -1033,10 +915,7 @@ function renderEncuentro(index) {
     ? `<button class="sub-nav-btn" onclick="goToEncuentro(${next})">→ ${encuentros[next].titulo}</button>`
     : `<button class="sub-nav-btn disabled">→</button>`;
 
-  const bgStyle = e.tipo === 'kickoff' ? '' : (e.tipo === 'capsula' ? 'border-left: 6px solid var(--lime);' : '');
-
   document.getElementById('page-encuentro').innerHTML = `
-    <!-- SUBPAGE HERO -->
     <section class="subpage-hero">
       <div class="subpage-deco"></div>
       <div class="container">
@@ -1047,7 +926,6 @@ function renderEncuentro(index) {
       </div>
     </section>
 
-    <!-- RESUMEN -->
     <section class="content-section">
       <div class="container">
         <span class="section-label">Resumen</span>
@@ -1055,7 +933,6 @@ function renderEncuentro(index) {
       </div>
     </section>
 
-    <!-- IDEAS CLAVE -->
     <section class="content-section alt">
       <div class="container">
         <h2 class="content-title">Ideas <span class="accent">clave</span></h2>
@@ -1063,15 +940,14 @@ function renderEncuentro(index) {
       </div>
     </section>
 
-    <!-- GRABACIÓN -->
     <section class="content-section">
       <div class="container">
-        <h2 class="content-title">Grabación del <span class="accent">encuentro</span></h2>
+        <h2 class="content-title">Grabación & <span class="accent">Feedback</span></h2>
         ${grabacionHTML}
+        ${encuestaHTML}
       </div>
     </section>
 
-    <!-- NAV ENTRE ENCUENTROS -->
     <section class="content-section" style="padding: 32px 0;">
       <div class="container">
         <div class="sub-nav">
@@ -1082,7 +958,43 @@ function renderEncuentro(index) {
       </div>
     </section>
 
-    <!-- FOOTER -->
+    <footer>
+      <span class="footer-logo">KODO</span>
+      <span class="footer-meta">Formación en Reclutamiento Estratégico · Edición 1.26</span>
+      <span class="footer-tag">@kodohr_</span>
+    </footer>
+  `;
+}
+
+// ── RENDER GLOSARIO ──────────────────────────────────────────────
+function renderGlosario() {
+  const itemsHTML = glosario.map(g => `
+    <div class="glossary-item">
+      <div>
+        <p class="glossary-term">${g.term}</p>
+        <span class="glossary-tag-inline">${g.tag}</span>
+      </div>
+      <p class="glossary-def">${g.def}</p>
+    </div>
+  `).join('');
+
+  document.getElementById('page-glosario').innerHTML = `
+    <section class="subpage-hero">
+      <div class="subpage-deco"></div>
+      <div class="container">
+        <div class="back-btn" onclick="goHome()">← Volver al índice</div>
+        <p class="subpage-eyebrow">📖 Recurso del Squad</p>
+        <h1 class="subpage-title">El <span class="highlight">diccionario</span><br>del Hunter</h1>
+        <p class="subpage-fecha">Palabras y conceptos que construimos en cada encuentro</p>
+      </div>
+    </section>
+    <section class="content-section">
+      <div class="container">
+        <h2 class="content-title"><span class="accent">${glosario.length} términos</span> y sumando</h2>
+        <p class="content-body" style="color:#555;">El glosario crece con cada sesión. Si algo no está o querés redefinir un término, llevalo al grupo de WhatsApp.</p>
+        <div class="glossary-grid">${itemsHTML}</div>
+      </div>
+    </section>
     <footer>
       <span class="footer-logo">KODO</span>
       <span class="footer-meta">Formación en Reclutamiento Estratégico · Edición 1.26</span>
@@ -1091,6 +1003,5 @@ function renderEncuentro(index) {
   `;
 }
 </script>
-
 </body>
 </html>
