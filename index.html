@@ -562,13 +562,13 @@
         </div>
         <div class="encuentro-card" onclick="goToEncuentro(1)">
           <div class="encuentro-num">01</div>
-          <p class="encuentro-titulo">Discovery Call</p>
+          <p class="encuentro-titulo">Ecosistema & Journey del Reclutador</p>
           <p class="encuentro-fecha">09 Jun · 18:30hs</p>
           <span class="encuentro-arrow">→</span>
         </div>
         <div class="encuentro-card" onclick="goToEncuentro(2)">
           <div class="encuentro-num">02</div>
-          <p class="encuentro-titulo">Job Description</p>
+          <p class="encuentro-titulo">Discovery Call</p>
           <p class="encuentro-fecha">16 Jun · 18:30hs</p>
           <span class="encuentro-arrow">→</span>
         </div>
@@ -665,6 +665,11 @@
 ════════════════════════════════════════════════ -->
 <div id="page-glosario" class="page"></div>
 
+<!-- ═══════════════════════════════════════════════
+     MATERIAL COMPLEMENTARIO SUBPAGE
+════════════════════════════════════════════════ -->
+<div id="page-material" class="page"></div>
+
 <script>
 // ── ENCUENTROS DATA ──────────────────────────────────────────────
 const encuentros = [
@@ -683,28 +688,32 @@ const encuentros = [
     encuesta: "https://docs.google.com/forms/d/e/1FAIpQLSelERR3ACGAbT3hU_vax35IKll3gtQf_-jBb9tsc2Lik9Nmfg/viewform"
   },
   {
-    num: "01", titulo: "Discovery Call", subtitulo: "El arte de entender antes de buscar",
+    num: "01", titulo: "Ecosistema & Journey del Reclutador", subtitulo: "El mapa completo antes de salir a buscar",
     fecha: "09 de Junio de 2026", tipo: "sesion",
-    resumen: "La Discovery Call es la conversación que lo cambia todo. Aprendemos a hacer las preguntas correctas al cliente interno antes de arrancar cualquier búsqueda — porque reclutar sin entender el contexto es disparar al aire.",
+    resumen: "Antes de salir a buscar talento hay que entender el tablero completo: qué tipos de servicios de reclutamiento existen, quiénes son los actores de toda búsqueda y cuál es el mapa de fases — el Journey del Reclutador — que vamos a profundizar fase por fase en las próximas sesiones, empezando por la Discovery Call.",
     ideasClave: [
-      { icon: "🔍", texto: "Antes de buscar candidatos, hay que entender el por qué de la posición: ¿crecimiento, reemplazo, urgencia del negocio?" },
-      { icon: "💬", texto: "Preguntas que revelan: cómo pasar de un brief superficial a un brief estratégico." },
-      { icon: "🤝", texto: "La Discovery Call como primer movimiento de posicionamiento: ya en ese momento, sos un socio estratégico o un operario." },
+      { icon: "🧭", texto: "Tipos de servicios de reclutamiento: RPO (terciarización completa del proceso), Headhunting (búsqueda activa, hoy aplicada a casi cualquier rol), Staffing/Software Factory (equipos asignados a cuentas cliente) y Sourcing (identificar y validar talento sin gestionar todo el proceso)." },
+      { icon: "🔺", texto: "Los 3 stakeholders de toda búsqueda: Hiring Manager, Cliente/RR.HH. y Candidato/a. Con el Hiring Manager, la clave es construir confianza real — no utilitaria." },
+      { icon: "🔄", texto: "Modelo OSAR (Observador → Sistema → Acciones → Resultado, de Rafael Echeverría): el resultado de una búsqueda depende de las acciones, que dependen del sistema de trabajo definido, atravesado por cómo observamos la situación. El sistema es donde más margen de maniobra inmediata tenemos." },
+      { icon: "🗺️", texto: "Primer pantallazo del Journey del Reclutador: relevamiento preliminar → Discovery Call → sourcing → entrevistas → presentación de candidatos → gestión de entrevistas con el cliente → negociación. Cada fase se profundiza, fase por fase, en las próximas sesiones." },
     ],
-    grabacion: null, grabacionLabel: "Encuentro 01 — Discovery Call",
+    grabacion: "https://drive.google.com/file/d/1gg8mQOrIewWtDIhXhG538wMbdC4_dQhl/view?usp=sharing", grabacionLabel: "Encuentro 01 — Ecosistema & Journey del Reclutador",
     encuesta: "https://docs.google.com/forms/d/e/1FAIpQLScVsyVAXx14jX3XWFxVHLQhi-naCJ3PxAMbs_xsQUO5ac2_tA/viewform?usp=publish-editor"
   },
   {
-    num: "02", titulo: "Job Description", subtitulo: "Escribir para atraer, no para filtrar",
+    num: "02", titulo: "Discovery Call", subtitulo: "El arte de entender antes de buscar",
     fecha: "16 de Junio de 2026", tipo: "sesion",
-    resumen: "Las descripciones de puesto convencionales ahuyentan talento. En este encuentro diseñamos Job Descriptions que comunican cultura, despiertan interés real y atraen al perfil que realmente necesitamos.",
+    resumen: "La Discovery Call es la conversación que lo cambia todo. Nos metemos de lleno en cómo levantar un pedido de búsqueda que casi nunca llega completo, cómo el sector y la estructura de la empresa moldean el perfil real, y qué condiciones hay que dejar siempre por escrito antes de salir a buscar.",
     ideasClave: [
-      { icon: "✍️", texto: "La diferencia entre una JD que excluye y una que convoca. Cómo reescribir desde el atractivo." },
-      { icon: "📋", texto: "Estructura de una JD estratégica: qué va, qué sobra y qué nunca debería faltar." },
-      { icon: "🎯", texto: "Lenguaje inclusivo y no sesgado: cómo las palabras que elegimos construyen (o destruyen) diversidad desde el inicio." },
+      { icon: "📥", texto: "No asumir el \"camino feliz\": los pedidos de búsqueda llegan incompletos por WhatsApp, llamada o mail. Hay que salir activamente a buscar la información que falta." },
+      { icon: "🏭", texto: "El sector, la industria y la estructura organizacional moldean el perfil: el mismo rol cambia totalmente según a quién reporta y en qué tipo de empresa se inserta." },
+      { icon: "🔍", texto: "La letra chica importa: sueldo neto/bruto, convenio, comisiones, viáticos, modalidad, figuras de contratación (relación de dependencia, contractor, prestación de servicios) y \"zonas prohibidas\" de sourcing." },
+      { icon: "☑️", texto: "Síndrome del checklist: pedir el 100% de los requisitos en una búsqueda ahuyenta talento — y suele desalentar más a las candidatas mujeres. La clave es priorizar los excluyentes sobre los deseables." },
+      { icon: "🎯", texto: "Práctica con el caso Desol: aplicamos todo esto en una Discovery Call simulada con un Hiring Manager, para el rol de Conversational Designer Semi-Senior." },
     ],
-    grabacion: null, grabacionLabel: "Encuentro 02 — Job Description",
-    encuesta: "https://docs.google.com/forms/d/e/1FAIpQLSehbbnuCshd5dcvOaOfsBFjClvH71uVZ5KoE0Jz7__oo0QiDA/viewform?usp=publish-editor"
+    grabacion: "https://drive.google.com/file/d/1vdn3JNgBia7ViFkv0h7cHzhnJ4N5XfvK/view?usp=sharing", grabacionLabel: "Encuentro 02 — Discovery Call",
+    encuesta: "https://docs.google.com/forms/d/e/1FAIpQLSehbbnuCshd5dcvOaOfsBFjClvH71uVZ5KoE0Jz7__oo0QiDA/viewform?usp=publish-editor",
+    materialExtra: { titulo: "Modelos de Contratación Frecuentes", sub: "Relación de dependencia, contractor y locación de servicios — en Argentina y en el exterior" }
   },
   {
     num: "03", titulo: "Perfil: Generalista & IT", subtitulo: "Leer entre líneas del mercado",
@@ -825,7 +834,7 @@ const glosario = [
   { term: "Cliente Interno", tag: "Estrategia", def: "El manager, área o referente dentro de la organización que solicita la búsqueda. Trabajar estratégicamente con el cliente interno implica no solo ejecutar su pedido sino cuestionarlo, calibrarlo y educarlo sobre el mercado." },
   { term: "Reclutador/a Estratégico/a", tag: "Mindset", def: "Quien trasciende la ejecución operativa para comprender el negocio, cuestionar las búsquedas desde el origen y posicionarse como socio/a de decisiones. No espera que le lleguen los requerimientos: los construye junto al cliente. No llena posiciones: resuelve problemas de negocio." },
   { term: "Perfil Idealista vs. Perfil Viable", tag: "Estrategia", def: "El <strong>perfil idealista</strong> es el wishlist del manager: todos los requisitos que desearía en un candidato perfecto. El <strong>perfil viable</strong> es lo que el mercado puede ofrecer dentro del presupuesto y el tiempo disponibles. El trabajo estratégico está en negociar esa brecha con el cliente interno." },
-  { term: "Discovery Call", tag: "Sesión 01", def: "Primera conversación estratégica con el cliente antes de iniciar cualquier búsqueda. Su objetivo no es tomar un brief sino entender la <em>necesidad real</em> detrás de la posición: ¿por qué existe este rol? ¿qué problema resuelve? ¿qué pasaría si no se cubre? Es el primer movimiento de posicionamiento estratégico." },
+  { term: "Discovery Call", tag: "Sesión 02", def: "Primera conversación estratégica con el cliente antes de iniciar cualquier búsqueda. Su objetivo no es tomar un brief sino entender la <em>necesidad real</em> detrás de la posición: ¿por qué existe este rol? ¿qué problema resuelve? ¿qué pasaría si no se cubre? Es el primer movimiento de posicionamiento estratégico." },
   { term: "Transparencia Radical", tag: "ADN Kodo", def: "Pilar Kodo. Decir la verdad aunque sea difícil, con candidatos, clientes y equipo. Si una búsqueda es inviable, si el presupuesto no acompaña el perfil pedido, si el proceso no va bien — se blanquea. La honestidad es el único camino para construir confianza a largo plazo." },
   { term: "Calidad de Contratación", tag: "Métricas", def: "El grado de cumplimiento real de los requisitos del rol. Calidad no siempre es el 100% de los requisitos técnicos: un perfil que resuelve la necesidad central del negocio con habilidades compensatorias puede tener más calidad que uno que cumple todos los requisitos en papel pero no encaja en la cultura." },
   { term: "Sourcing", tag: "Sesión 04", def: "Proceso activo de búsqueda de perfiles, especialmente <strong>pasivos</strong> (quienes no están buscando trabajo activamente). El sourcing estratégico va más allá de publicar avisos: incluye Boolean search en LinkedIn, comunidades técnicas, GitHub, foros y cualquier espacio donde viva el talento que se necesita." },
@@ -833,6 +842,24 @@ const glosario = [
   { term: "Candidate Experience", tag: "Sesión 08", def: "La experiencia que vive una persona candidata a lo largo de todo el proceso de selección. Cada interacción es una comunicación de quiénes somos como empleadores. Una mala experiencia destruye marca, aunque el proceso haya terminado bien." },
   { term: "Touchpoints", tag: "Journey", def: "Cada uno de los puntos de contacto que tiene el reclutador con los distintos actores del proceso (candidato, cliente, equipo). Mapear los touchpoints permite identificar dónde se generan los momentos WOW, dónde están los dolores (pains) y dónde hay oportunidades de mejora." },
   { term: "Pains / Gains / Wow", tag: "Journey", def: "Marco del Journey del Reclutador: los <em>Pains</em> son los puntos de dolor del proceso; los <em>Gains</em> son los beneficios y resultados esperados; los <em>Wow</em> son los momentos que superan expectativas y generan lealtad." },
+  { term: "RPO (Recruitment Process Outsourcing)", tag: "Sesión 01", def: "Modelo de servicio donde el proceso de reclutamiento se terceriza casi por completo. La contratación final es de la empresa cliente, no de la agencia — salvo en el modelo \"embebido\", donde el/la reclutador/a trabaja insertado/a dentro del equipo del cliente." },
+  { term: "Headhunting", tag: "Sesión 01", def: "Búsqueda activa y directa de talento. Originalmente reservada a roles ejecutivos o confidenciales, hoy el término se usa de forma más amplia para casi cualquier búsqueda que implique salir a buscar candidatos en lugar de esperar postulaciones." },
+  { term: "Staffing / Software Factory", tag: "Sesión 01", def: "Modelo donde una empresa arma equipos técnicos (developers, PMs, etc.) y los asigna como \"células\" a cuentas de clientes, que escalan recursos sin asumir el riesgo de contratar y desvincular directamente. Cuando un/a recurso queda sin proyecto asignado, queda en <em>bench</em>." },
+  { term: "People Operations", tag: "Sesión 01", def: "Función nacida durante la pandemia que combina gestión del talento con una mirada comercial y operativa, típica de las Software Factories. Cuida la experiencia de los recursos asignados a una cuenta cliente, más allá de la selección inicial." },
+  { term: "Modelo OSAR", tag: "Sesión 01", def: "Marco de Rafael Echeverría (coaching ontológico): Observador → Sistema → Acciones → Resultado. El resultado de una búsqueda (el mejor talento en el menor tiempo) depende de las acciones tomadas, que están enmarcadas por un sistema de trabajo definido, que a su vez está moldeado por cómo el/la reclutador/a observa la situación." },
+  { term: "Stakeholders del Proceso de Selección", tag: "Sesión 01", def: "Los tres actores presentes en toda búsqueda: el <strong>Hiring Manager</strong> (a quien reportará la posición), el <strong>Cliente/RR.HH.</strong> (representa formalmente a la empresa) y el/la <strong>Candidato/a</strong>. Cada fase del Journey del Reclutador implica gestionar la relación con los tres." },
+  { term: "Síndrome del Checklist", tag: "Sesión 02", def: "Tendencia a pedir el 100% de los requisitos \"deseables\" en una búsqueda, sin distinguirlos de los verdaderamente <em>excluyentes</em>. Ahuyenta candidatos válidos y, según lo visto en clase, suele desalentar más la postulación de mujeres que de varones." },
+  { term: "Zonas Prohibidas", tag: "Sesión 02", def: "Restricciones de sourcing acordadas con el cliente: empresas competidoras o perfiles específicos vedados para una búsqueda puntual (por ejemplo, no contactar candidatos de una empresa rival). Se relevan en la Discovery Call, no se asumen." },
+  { term: "Letra Chica", tag: "Sesión 02", def: "Los detalles operativos de una oferta que siempre hay que preguntar en la Discovery Call: sueldo neto o bruto, convenio, comisiones, viáticos, uso de vehículo y modalidad de trabajo. Suelen ser lo que de verdad le importa al candidato/a a la hora de decidir." },
+  { term: "Figuras de Contratación", tag: "Sesión 02", def: "Las distintas formas legales bajo las que se puede vincular a una persona contratada: relación de dependencia, contractor o prestación de servicios. Cada una tiene implicancias legales y de pago distintas que hay que dejar claras desde la Discovery Call." },
+];
+
+// ── MATERIAL COMPLEMENTARIO DATA ──────────────────────────────────
+const materialComplementario = [
+  { term: "Relación de Dependencia", tag: "Argentina", def: "Vínculo regulado por la Ley de Contrato de Trabajo (LCT): la empresa registra a la persona como empleada, aporta a ART, paga aguinaldo (SAC), vacaciones pagas y, ante un despido sin causa, indemnización. Si el puesto está alcanzado por un <strong>Convenio Colectivo de Trabajo (CCT)</strong>, el salario mínimo, la categoría y los adicionales (presentismo, antigüedad) quedan fijados por ese convenio; <strong>fuera de convenio</strong> suele aplicar a puestos jerárquicos o de confianza, negociados de forma individual. En la Discovery Call conviene relevar si el rol está dentro o fuera de convenio, cuál convenio aplica, la categoría y los beneficios adicionales reales — eso define el piso salarial concreto. Al candidato/a hay que aclararle si el rol está dentro o fuera de convenio, sueldo neto vs. bruto, y los beneficios de hecho más allá de los de ley." },
+  { term: "Contrato de Locación de Servicios (\"Contractor\")", tag: "Argentina", def: "La persona no es empleada: factura como prestador/a independiente, habitualmente bajo <strong>Monotributo</strong> o Responsable Inscripto. No hay relación de dependencia, por lo que en términos estrictamente legales no hay aguinaldo, vacaciones pagas, ART a cargo de la empresa ni indemnización. En la práctica esto es una <strong>zona gris</strong>: muchas empresas extienden por cuenta propia beneficios equiparables a los de relación de dependencia — por ejemplo, seguir pagando igual si la persona toma unos días de \"vacaciones\", cubrir el equipamiento de trabajo, o sostener el pago en algún período de inactividad — pero esto depende exclusivamente de cada empresa y no es una obligación legal. En la Discovery Call conviene relevar tanto las condiciones formales (quién cubre el monotributo, categoría, fecha y medio de pago) como estas prácticas informales, sin asumir que existen ni que no existen. Al candidato/a hay que explicarle la diferencia entre lo que la ley garantiza y lo que la empresa ofrece \"por práctica\" — y que vale la pena confirmarlo antes de aceptar." },
+  { term: "Relación de Dependencia en el Exterior", tag: "Exterior", def: "Cada país tiene su propio marco regulatorio (jornada, aguinaldo o no, vacaciones, preaviso, indemnización, aportes), así que no hay un modelo único replicable. Checklist para relevar con la empresa o el hiring manager: ¿tiene entidad legal en el país del candidato/a, o contrata vía <strong>Employer of Record (EOR)</strong> / PEO? ¿bajo qué legislación laboral se rige el contrato? ¿cuál es la jornada y el régimen de horas extra? ¿hay aguinaldo, vacaciones pagas y feriados obligatorios, y de cuántos días? ¿cuál es el preaviso y la indemnización por despido sin causa? ¿qué cobertura de salud/seguro social aplica y quién la paga? ¿en qué moneda y con qué frecuencia se paga? ¿quién retiene los impuestos? ¿hay período de prueba, y de qué duración?" },
+  { term: "\"Contractor\" en el Exterior", tag: "Exterior", def: "Prácticas frecuentes: firma de un <strong>NDA</strong> y, en muchos casos, de un contrato de prestación de servicios (\"Service Agreement\") en lugar de un contrato laboral tradicional, con pago en USD vía plataformas como <strong>Wise</strong> o <strong>Payoneer</strong>. Igual que en Argentina, es habitual que la empresa otorgue de forma voluntaria beneficios equiparables a los de un empleado directo (días pagos, equipamiento, continuidad de pago en ausencias) sin que exista obligación legal de hacerlo — varía mucho según la cultura y las políticas internas de cada compañía. Vale la pena sumar esa pregunta al checklist: ¿la empresa otorga algún beneficio \"de hecho\" más allá del contrato de servicios?, además de NDA, plataforma y moneda de pago, y quién asume las comisiones bancarias." },
 ];
 
 // ── NAVIGATION ──────────────────────────────────────────────
@@ -842,6 +869,7 @@ function goHome() {
   document.getElementById('page-home').classList.add('active');
   document.getElementById('page-encuentro').classList.remove('active');
   document.getElementById('page-glosario').classList.remove('active');
+  document.getElementById('page-material').classList.remove('active');
   window.scrollTo(0, 0);
 }
 
@@ -851,6 +879,7 @@ function goToEncuentro(index) {
   document.getElementById('page-home').classList.remove('active');
   document.getElementById('page-encuentro').classList.add('active');
   document.getElementById('page-glosario').classList.remove('active');
+  document.getElementById('page-material').classList.remove('active');
   window.scrollTo(0, 0);
 }
 
@@ -859,6 +888,16 @@ function goToGlosario() {
   document.getElementById('page-home').classList.remove('active');
   document.getElementById('page-encuentro').classList.remove('active');
   document.getElementById('page-glosario').classList.add('active');
+  document.getElementById('page-material').classList.remove('active');
+  window.scrollTo(0, 0);
+}
+
+function goToMaterial() {
+  renderMaterial();
+  document.getElementById('page-home').classList.remove('active');
+  document.getElementById('page-encuentro').classList.remove('active');
+  document.getElementById('page-glosario').classList.remove('active');
+  document.getElementById('page-material').classList.add('active');
   window.scrollTo(0, 0);
 }
 
@@ -907,6 +946,23 @@ function renderEncuentro(index) {
       </div>`
     : '';
 
+  const materialHTML = e.materialExtra
+    ? `<section class="content-section">
+        <div class="container">
+          <h2 class="content-title">Material <span class="accent">complementario</span></h2>
+          <div class="encuesta-box" onclick="goToMaterial()" style="cursor:pointer;">
+            <div class="encuesta-icon">📑</div>
+            <div>
+              <p class="encuesta-info-label">Para profundizar</p>
+              <p class="encuesta-info-title">${e.materialExtra.titulo}</p>
+              <p class="encuesta-info-sub">${e.materialExtra.sub}</p>
+            </div>
+            <span class="encuesta-link">Ver →</span>
+          </div>
+        </div>
+      </section>`
+    : '';
+
   const prevBtn = prev !== null
     ? `<button class="sub-nav-btn" onclick="goToEncuentro(${prev})">← ${encuentros[prev].titulo}</button>`
     : `<button class="sub-nav-btn disabled">←</button>`;
@@ -947,6 +1003,8 @@ function renderEncuentro(index) {
         ${encuestaHTML}
       </div>
     </section>
+
+    ${materialHTML}
 
     <section class="content-section" style="padding: 32px 0;">
       <div class="container">
@@ -992,6 +1050,43 @@ function renderGlosario() {
       <div class="container">
         <h2 class="content-title"><span class="accent">${glosario.length} términos</span> y sumando</h2>
         <p class="content-body" style="color:#555;">El glosario crece con cada sesión. Si algo no está o querés redefinir un término, llevalo al grupo de WhatsApp.</p>
+        <div class="glossary-grid">${itemsHTML}</div>
+      </div>
+    </section>
+    <footer>
+      <span class="footer-logo">KODO</span>
+      <span class="footer-meta">Formación en Reclutamiento Estratégico · Edición 1.26</span>
+      <span class="footer-tag">@kodohr_</span>
+    </footer>
+  `;
+}
+
+// ── RENDER MATERIAL COMPLEMENTARIO ──────────────────────────────────
+function renderMaterial() {
+  const itemsHTML = materialComplementario.map(m => `
+    <div class="glossary-item">
+      <div>
+        <p class="glossary-term">${m.term}</p>
+        <span class="glossary-tag-inline">${m.tag}</span>
+      </div>
+      <p class="glossary-def">${m.def}</p>
+    </div>
+  `).join('');
+
+  document.getElementById('page-material').innerHTML = `
+    <section class="subpage-hero">
+      <div class="subpage-deco"></div>
+      <div class="container">
+        <div class="back-btn" onclick="goHome()">← Volver al índice</div>
+        <p class="subpage-eyebrow">📑 Material complementario</p>
+        <h1 class="subpage-title">Modelos de <span class="highlight">contratación</span><br>frecuentes</h1>
+        <p class="subpage-fecha">Relación de dependencia, contractor y locación de servicios — en Argentina y en el exterior</p>
+      </div>
+    </section>
+    <section class="content-section">
+      <div class="container">
+        <h2 class="content-title">Marco general del <span class="accent">mercado</span> y prácticas frecuentes</h2>
+        <p class="content-body" style="color:#555;">Esto no es asesoramiento legal ni contable: es un mapa de cómo se mueve el mercado hoy, para que sepas qué relevar en la Discovery Call y qué explicarle al candidato/a. Las prácticas "de hecho" (beneficios extra, formas de pago) varían de empresa a empresa — siempre vale la pena confirmarlas puntualmente, y ante un caso concreto, validarlo con un abogado/a o contador/a.</p>
         <div class="glossary-grid">${itemsHTML}</div>
       </div>
     </section>
